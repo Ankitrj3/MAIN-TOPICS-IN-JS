@@ -1,0 +1,78 @@
+<!-- add friend button with same button -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add friend project</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url(https://media.idownloadblog.com/wp-content/uploads/2022/05/Dawn-Neo-City-Dual-Screen-Wallpaper-by-Twelve-South-5K-Right.jpg);
+            
+        }
+        #box{
+            margin-top: 100px;
+            height: 600px;
+            width: 300px;
+            border-radius: 20px;
+            background-color: rgba(196, 141, 2, 0.456);
+            padding: 20px;
+            cursor: pointer;
+        }
+        #box img{
+            height: 70%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+
+        }
+        #box h1{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 25px;
+            margin: 10px 0px;
+        }
+        #box button{
+            background-color: rgb(166, 140, 12);
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+            padding: 10px;
+        }
+        #box #remove{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <img src="https://img.mensxp.com/media/content/2023/May/unknown_338967437_107964582249469_990477466333000736_n_6461c89dee7c7.jpeg" alt="not found">
+        <center><h1>VIJAY</h1></center>
+        <center><h3>Stranger</h3></center>
+        <center><button id="add">Add friend</button>
+            
+    </div>
+
+    <script>var istatus = document.querySelector("h3");
+            var add = document.getElementById("add");
+            var flag = 1;
+            
+            add.addEventListener("click",function(){
+                if(flag==1){
+                 istatus.innerHTML = "Friends";
+                 istatus.style.color = "green";
+                 flag =0;
+                }else{
+                    istatus.innerHTML ="Stranger";
+                    istatus.style.color ="red";
+                    flag =1
+                }
+            });
+            
+    </script>
+</body>
+</html>
