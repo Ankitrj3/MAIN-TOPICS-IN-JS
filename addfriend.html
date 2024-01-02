@@ -1,0 +1,72 @@
+<!-- add friend button with same button -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add friend project</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 136, 0, 0.674);
+        }
+        #box{
+            margin-top: 100px;
+            height: 600px;
+            width: 300px;
+            border-radius: 20px;
+            background-color: rgba(246, 104, 3, 0.456);
+            padding: 20px;
+            cursor: pointer;
+        }
+        #box img{
+            height: 70%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+
+        }
+        #box h1{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 25px;
+            margin: 10px 0px;
+        }
+        #box button{
+            background-color: aquamarine;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+            padding: 10px;
+        }
+        #box #remove{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <img src="https://www.discoverwalks.com/blog/wp-content/uploads/2020/04/katrina_kaif_promoting_bharat_in_2019.jpg" alt="not found">
+        <center><h1>katrina_kaif</h1></center>
+        <center><h3>stranger</h3></center>
+        <center><button id="add">Add friend</button>
+            <button id="remove">remove</button></center>
+    </div>
+
+    <script>var istatus = document.querySelector("h3");
+            var add = document.getElementById("add");
+            var remove = document.getElementById("remove");
+            add.addEventListener("click",function(){
+                 istatus.innerHTML = "friends";
+                 istatus.style.color = "green";
+            });
+            remove.addEventListener("click",function(){
+                istatus.innerHTML="not friends";
+                istatus.style.color ="red";
+            });
+    </script>
+</body>
+</html>
